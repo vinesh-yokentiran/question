@@ -16,7 +16,7 @@ export default function Page() {
     const phrases = [
       "No",
       "Why'd you click no ya monkey??",
-      "prettyyy pleaseee with cherries on top kek",
+      "UCEEE CLICK YES PLEASEEE",
       "I'm not letting you say no",
       "TRY AGAIN",
       "Cmon sureeely",
