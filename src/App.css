@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif; /* Change to your preferred font */
-  background-color: #f0f0f0; /* Change to your preferred background color */
+  background-color: #ffebef; /* Change to your preferred background color */
 }
 
 .flex {
@@ -55,20 +55,18 @@ button {
 }
 
 button.yes-button {
-  background-color: #2ecc71; /* Change to your preferred green color */
-  color: white;
+  color: black;
   margin-right: 16px;
 }
 
 button.yes-button:hover {
-  background-color: #27ae60; /* Change to your preferred darker green color on hover */
+  background-color: #a3feba; /* Change to your preferred darker red color on hover */
 }
 
 button.no-button {
-  background-color: #e74c3c; /* Change to your preferred red color */
-  color: white;
+  color: black;
 }
 
 button.no-button:hover {
-  background-color: #c0392b; /* Change to your preferred darker red color on hover */
+  background-color: #ca7d75; /* Change to your preferred darker red color on hover */
 }

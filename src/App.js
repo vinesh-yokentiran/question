@@ -6,6 +6,7 @@ import { useState } from "react";
 export default function Page() {
   const [noCount, setNoCount] = useState(0);
   const [yesPressed, setYesPressed] = useState(false);
+  const [proceedClicked, setProceedClicked] = useState(false);
   const yesButtonSize = noCount * 20 + 16;
 
   const handleNoClick = () => {
@@ -19,7 +20,7 @@ export default function Page() {
       "UCEEE CLICK YES PLEASEEE",
       "I'm not letting you say no",
       "TRY AGAIN",
-      "Cmon sureeely",
+      "Cmon surely",
       "I'm the coolest guy you know cmon click yes",
       "Give it another go pls",
       "Are you absolutely most certainly certain?",
@@ -37,22 +38,30 @@ export default function Page() {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen -mt-16">
-      {yesPressed ? (
+      {!proceedClicked ? (
         <>
-        <img src="https://tenor.com/en-GB/view/i-love-you-mocha-mocha-and-milk-mocha-hug-i-miss-you-hearts-gif-27173805.gif" />
-        <div className="text-4xl font-bold my-4">Wooo hooooo I love youuuu!!</div>
+          <img src="https://tenor.com/en-GB/view/milk-and-mocha-gif-11236733357587877369.gif" />
+          <h1 className="text-4xl my-4">I have a question to ask you...</h1>
+          <button onClick={() => setProceedClicked(true)} className="proceed-button">
+            What is it?
+          </button>
+        </>
+      ) : yesPressed ? (
+        <>
+          <img src="https://tenor.com/en-GB/view/i-love-you-mocha-mocha-and-milk-mocha-hug-i-miss-you-hearts-gif-27173805.gif" />
+          <div className="text-4xl font-bold my-4">Wooo hooooo I love youuuu!!</div>
         </>
       ) : (
         <>
           <img className="h-[200px]" src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif" />
           <h1 className="text-4xl my-4">Will you be my Valentine?</h1>
           <div>
-          <button onClick={() => setYesPressed(true)} className="yes-button">
-            Yes
-          </button>
-          <button onClick={handleNoClick} className="no-button">
-            {noCount === 0 ? "No" : getNoButtonText()}
-          </button>
+            <button onClick={() => setYesPressed(true)} className="yes-button">
+              Yes
+            </button>
+            <button onClick={handleNoClick} className="no-button">
+              {noCount === 0 ? "No" : getNoButtonText()}
+            </button>
           </div>
         </>
       )}
